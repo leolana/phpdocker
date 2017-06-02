@@ -1,6 +1,6 @@
 FROM php:7.1-fpm
 
-MAINTAINER Jaroslav Hranicka <hranicka@outlook.com>
+MAINTAINER Leonardo Lana <leolucas.lana@hotmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
