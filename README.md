@@ -41,7 +41,6 @@ Usage: `URL="https://www.example.com" STATUS=403 check-status-code`
 	* [SSH2](http://php.net/ssh2)
 	* [Redis](http://redis.io)
 	* [APCu](http://php.net/apcu)
-	* [Memcached](http://php.net/manual/en/book.memcached.php)
 * [NodeJS](https://nodejs.org)
 	* [Yarn](https://yarnpkg.com/)
 	* [Grunt](http://gruntjs.com/)
