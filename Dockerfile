@@ -155,6 +155,8 @@ RUN curl -OL https://phar.phpunit.de/phpunit.phar \
 
 ADD php.ini /usr/local/etc/php/conf.d/docker-php.ini
 
+VOLUME /var/www/html
+EXPOSE 80
 
 ## NodeJS, NPM
 # Install NodeJS
