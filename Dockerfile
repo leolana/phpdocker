@@ -1,6 +1,6 @@
 FROM php:5.6-fpm
 
-MAINTAINER Jaroslav Hranicka <hranicka@outlook.com>
+MAINTAINER Leonardo Lana <leolucas.lana@hotmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -151,6 +151,8 @@ RUN curl -OL https://phar.phpunit.de/phpunit.phar \
 
 ADD php.ini /usr/local/etc/php/conf.d/docker-php.ini
 
+VOLUME /var/www/html
+EXPOSE 80
 
 ## NodeJS, NPM
 # Install NodeJS
