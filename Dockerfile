@@ -116,10 +116,14 @@ RUN docker-php-ext-install \
 
 # PECL
 RUN docker-php-pecl-install \
-	ssh2-0.13 \
+#	ssh2-0.13 \
 	redis-2.2.8 \
-	apcu-4.0.11 \
-	memcached-2.2.0
+	apcu-4.0.11
+	
+# SSH2
+# TODO PECL is buggy, we must compile it.
+RUN git clone https://github.com/php/pecl-networking-ssh2.git /usr/src/php/ext/ssh2 \
+	&& docker-php-ext-install ssh2
 
 # Install XDebug, but not enable by default. Enable using:
 # * php -d$XDEBUG_EXT vendor/bin/phpunit
@@ -160,6 +164,7 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
 	&& apt-get install -y nodejs
 
 # Install Yarn
+
 RUN apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3 \
 	&& echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
