@@ -2,7 +2,7 @@
 
 ## Usage
 
-* Docker image is available at [Docker Hub](https://hub.docker.com/r/phpdocker/phpdocker/).
+* Docker image is available at [Docker Hub](https://hub.docker.com/r/leonardolana/phpdocker/).
 * The primary goal of this Docker image is custom image for CI, but you can obviously use it like you want.
 
 ## Example
@@ -13,7 +13,7 @@
 
 * Tags depend on version of PHP included.
 * They are given by git branches.
-* You can see them at [Docker Hub](https://hub.docker.com/r/phpdocker/phpdocker/tags/).
+* You can see them at [Docker Hub](https://hub.docker.com/r/leonardolana/phpdocker/tags/).
 
 ---
 
@@ -56,8 +56,7 @@ Usage: `URL="https://www.example.com" STATUS=403 check-status-code`
 * PHP is started automatically.
 * You can type PHP commands, eg. `php -r "echo 1;"`.
 * Each Docker image contains ONLY ONE VERSION OF PHP, so:
-	* If you need PHP 5.6, use `phpdocker/phpdocker:5.6`.
-	* If you need PHP 7.0, use `phpdocker/phpdocker:7.0`.
+	* If you need PHP 5.6, use `leonardolana/phpdocker:5.6`.
 
 ### MariaDB
 
