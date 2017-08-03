@@ -1,4 +1,4 @@
-# phpdocker/phpdocker
+# leonardolana/phpdocker
 
 ## Usage
 
