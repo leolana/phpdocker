@@ -62,6 +62,7 @@ RUN apt-get update \
 
 # database
 RUN docker-php-ext-install \
+	mysql \
 	mysqli \
 	pdo \
 	pdo_mysql
@@ -119,11 +120,6 @@ RUN docker-php-pecl-install \
 #	ssh2-0.13 \
 	redis-2.2.8 \
 	apcu-4.0.11
-	
-# SSH2
-# TODO PECL is buggy, we must compile it.
-RUN git clone https://github.com/php/pecl-networking-ssh2.git /usr/src/php/ext/ssh2 \
-	&& docker-php-ext-install ssh2
 
 # Install XDebug, but not enable by default. Enable using:
 # * php -d$XDEBUG_EXT vendor/bin/phpunit
